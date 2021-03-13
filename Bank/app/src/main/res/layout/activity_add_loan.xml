@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddLoanActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtHeaderRelLayout"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Loan"
+        android:textStyle="bold"
+        android:id="@+id/txtHeader"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameRelLayout"
+        android:padding="5dp"
+        android:layout_below="@+id/txtHeaderRelLayout"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtName"
+            android:text="Name:"
+            android:textStyle="bold"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:id="@+id/edtTxtName"
+            android:layout_marginTop="3dp"
+            android:hint="Loan Name"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/initAmountRelLayout"
+        android:padding="5dp"
+        android:layout_below="@+id/nameRelLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtInitAmount"
+            android:text="Initial Amount: "
+            android:textStyle="bold"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtInitAmount"
+            android:id="@+id/edtTxtInitAmount"
+            android:layout_marginTop="3dp"
+            android:hint="Initial Amount"/>
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/monthlyROIRelLayout"
+            android:padding="5dp"
+            android:layout_below="@+id/initAmountRelLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtROI"
+                android:text="Monthly ROI:"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtROI"
+                android:id="@+id/edtTxtROI"
+                android:layout_marginTop="3dp"
+                android:hint="Monthly ROI"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/monthlyPaymentRelLayout"
+            android:padding="5dp"
+            android:layout_below="@+id/monthlyROIRelLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtMonthlyPayment"
+                android:text="Monthly Payment:"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtMonthlyPayment"
+                android:id="@+id/edtTxtMonthlyPayment"
+                android:layout_marginTop="3dp"
+                android:hint="Monthly Payment"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/initDateRelLayout"
+            android:padding="5dp"
+            android:layout_below="@+id/monthlyPaymentRelLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtInitDate"
+                android:text="Initial Date:"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtInitDate"
+                android:id="@+id/edtTxtInitDate"
+                android:layout_marginTop="3dp"
+                android:hint="Enter Init Date"
+                android:inputType="date"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/edtTxtInitDate"
+                android:layout_centerInParent="true"
+                android:text="Pick Date"
+                android:id="@+id/btnInitDate" />
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/finishDateRelLayout"
+        android:padding="5dp"
+        android:layout_below="@+id/initDateRelLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtFinishDate"
+            android:text="Finish Date:"
+            android:textStyle="bold"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtFinishDate"
+            android:id="@+id/edtTxtFinishDate"
+            android:layout_marginTop="3dp"
+            android:hint="Enter Finish Date"
+            android:inputType="date"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/edtTxtFinishDate"
+            android:layout_centerInParent="true"
+            android:text="Pick Date"
+            android:id="@+id/btnFinishDate"/>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/finishDateRelLayout"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:text="ADD LOAN"
+        android:id="@+id/btnAddLoan"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAddLoan"
+        android:layout_centerHorizontal="true"
+        android:text="Warnings"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtWarning"
+        android:visibility="gone"/>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</RelativeLayout>
